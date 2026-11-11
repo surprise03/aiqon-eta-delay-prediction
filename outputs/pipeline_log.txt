@@ -1,0 +1,36 @@
+[data] 300 shipments | delayed(>24h): 51% | median delay 25.6h
+[eval]
+        checkpoint  mae_schedule  mae_carry_forward  mae_carry_plus_route_mean  mae_ridge  mae_gbm  auc  p10_p90_coverage
+        C0_booking         62.98              62.98                      61.75      64.29    56.87 0.74              0.82
+       C1_departed         62.98              48.40                      48.87      52.02    44.16 0.78              0.78
+   C2_port_arrival         62.98              44.59                      38.20      31.81    29.24 0.85              0.78
+C3_customs_release         62.98              10.66                       9.69       8.82     5.60 0.99              0.83
+[holdout] 60 unseen shipments
+        checkpoint  mae_gbm  mae_carry_forward  coverage
+        C0_booking    51.10              64.62      0.87
+       C1_departed    44.19              54.49      0.88
+   C2_port_arrival    29.79              48.65      0.82
+C3_customs_release     5.88              13.30      0.73
+[explain] attribution check @C2: {'n': 154, 'top1_agreement': 0.7077922077922078, 'top2_agreement': 0.8831168831168831, 'chance_top1': 0.3333333333333333}
+[propagation]
+      congestion       arrival  n  median_arrival_delay_h  median_final_delay_h  median_downstream_added_h  share_absorbed
+      low (<0.5) early/on time 45                    -7.9                   2.5                       14.6            0.00
+      low (<0.5)    late 0-24h 21                     7.2                   5.6                       -0.9            0.52
+      low (<0.5)     late >24h 10                   162.9                 231.4                       33.5            0.00
+medium (0.5-0.7) early/on time 87                    -9.1                   1.3                       16.5            0.01
+medium (0.5-0.7)    late 0-24h 44                     8.0                  22.1                        8.8            0.41
+medium (0.5-0.7)     late >24h 25                   135.1                 197.9                       65.2            0.00
+     high (>0.7) early/on time 29                    -8.0                  36.6                       44.1            0.00
+     high (>0.7)    late 0-24h 28                     9.8                  52.5                       47.6            0.25
+     high (>0.7)     late >24h  9                   149.4                 312.4                      108.1            0.00
+[robustness]
+ missing_scale         checkpoint  mae_gbm  mae_carry_forward
+           0.0    C2_port_arrival    27.94              45.36
+           0.0 C3_customs_release     4.53               9.30
+           1.0    C2_port_arrival    29.16              44.61
+           1.0 C3_customs_release     6.30              11.40
+           2.0    C2_port_arrival    28.59              43.95
+           2.0 C3_customs_release     8.57              13.73
+           3.0    C2_port_arrival    29.21              43.75
+           3.0 C3_customs_release    10.82              15.74
+[done] outputs written to C:\Users\16962\OneDrive - AutomatonsX\Desktop\project\aiqon-eta-delay\outputs

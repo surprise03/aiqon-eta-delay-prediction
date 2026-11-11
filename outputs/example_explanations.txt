@@ -1,0 +1,141 @@
+Shipment SHP0323  |  Singapore -> Hamburg  |  carrier Meridian  |  cargo perishable  |  checkpoint: C0_booking
+  Scheduled delivery : 2025-10-21 11:12
+  Predicted ETA      : 2025-10-26 05:16   (delay +4.8d, 80% band -2.1d .. +13.3d)
+  P(delay > 24h)     : 98%
+
+  Expected further delay: +4.8d  (typical shipment at this stage: +34h)
+  Main drivers vs typical shipment:
+     Customs & documentation            +2.2d   [documentation completeness=no, customs inspection risk (cargo x docs)=0.20]
+     Destination port congestion         +23h   [forecast congestion at destination=0.64, number of containers=17]
+     Inland / truck appointment           +3h   [peak season (truck scarcity)=yes, inland leg length=20]
+
+Shipment SHP0323  |  Singapore -> Hamburg  |  carrier Meridian  |  cargo perishable  |  checkpoint: C2_port_arrival
+  Scheduled delivery : 2025-10-21 11:12
+  Predicted ETA      : 2025-11-04 11:54   (delay +14.0d, 80% band +10.2d .. +17.5d)
+  P(delay > 24h)     : 99%
+
+  Delay already incurred: +10.3d
+     origin (until departure)                   +4h
+     departure -> port arrival               +10.1d
+
+  Expected further delay: +3.8d  (typical shipment at this stage: +33h)
+  Main drivers vs typical shipment:
+     Destination port congestion         +36h   [lateness x congestion score=193, port congestion on arrival=0.78]
+     Upstream delay (propagation)        +12h   [vessel arrival delay=10.3d, early arrival (absorbed at anchor)=0h]
+     Customs & documentation             +11h   [documentation completeness=no, working hours before weekend=62]
+
+Shipment SHP0323  |  Singapore -> Hamburg  |  carrier Meridian  |  cargo perishable  |  checkpoint: C3_customs_release
+  Scheduled delivery : 2025-10-21 11:12
+  Predicted ETA      : 2025-11-08 18:59   (delay +18.3d, 80% band +17.9d .. +18.9d)
+  P(delay > 24h)     : 100%
+
+  Delay already incurred: +18.1d
+     origin (until departure)                   +4h
+     departure -> port arrival               +10.1d
+     port arrival -> berth                    +3.0d
+     berth -> discharge                         +1h
+     discharge -> customs release             +4.7d
+
+  Expected further delay: +7h  (typical shipment at this stage: +7h)
+  Main drivers vs typical shipment:
+     Inland / truck appointment           +5h   [peak season (truck scarcity)=yes, slack before truck appointment=-17.6d]
+     Upstream delay (propagation)         -3h   [customs release delay=18.1d, vessel arrival delay=10.3d]
+     Destination port congestion          -2h   [port congestion on arrival=0.78, forecast congestion at destination=0.64]
+
+  ACTUAL: delivered 2025-11-08 18:24, delay 439h
+====================================================================================================
+
+Shipment SHP0341  |  Shanghai -> Los Angeles  |  carrier OceanA  |  cargo electronics  |  checkpoint: C0_booking
+  Scheduled delivery : 2025-05-05 05:24
+  Predicted ETA      : 2025-05-08 16:32   (delay +3.5d, 80% band -2.1d .. +8.6d)
+  P(delay > 24h)     : 94%
+
+  Expected further delay: +3.5d  (typical shipment at this stage: +34h)
+  Main drivers vs typical shipment:
+     Customs & documentation             +25h   [scheduled release falls on weekend=yes, documentation completeness=yes]
+     Destination port congestion         +22h   [forecast congestion at destination=0.75, number of containers=26]
+     Inland / truck appointment           +7h   [inland leg length=30, peak season (truck scarcity)=no]
+
+Shipment SHP0341  |  Shanghai -> Los Angeles  |  carrier OceanA  |  cargo electronics  |  checkpoint: C2_port_arrival
+  Scheduled delivery : 2025-05-05 05:24
+  Predicted ETA      : 2025-05-07 06:23   (delay +2.0d, 80% band -16h .. +2.9d)
+  P(delay > 24h)     : 93%
+
+  Delay already incurred: -10h
+     origin (until departure)                   +1h
+     departure -> port arrival                 -11h
+
+  Expected further delay: +2.5d  (typical shipment at this stage: +33h)
+  Main drivers vs typical shipment:
+     Customs & documentation             +19h   [scheduled release falls on weekend=yes, working hours before weekend=43]
+     Upstream delay (propagation)         +4h   [vessel arrival delay=-10h, departure delay=1h]
+     Destination port congestion          +3h   [port congestion on arrival=0.66, lateness x congestion score=0]
+
+Shipment SHP0341  |  Shanghai -> Los Angeles  |  carrier OceanA  |  cargo electronics  |  checkpoint: C3_customs_release
+  Scheduled delivery : 2025-05-05 05:24
+  Predicted ETA      : 2025-05-11 17:50   (delay +6.5d, 80% band +6.2d .. +6.8d)
+  P(delay > 24h)     : 100%
+
+  Delay already incurred: +6.4d
+     origin (until departure)                   +1h
+     departure -> port arrival                 -11h
+     port arrival -> berth                      +4h
+     berth -> discharge                        +12h
+     discharge -> customs release             +6.1d
+
+  Expected further delay: +3h  (typical shipment at this stage: +7h)
+  Main drivers vs typical shipment:
+     Inland / truck appointment           -3h   [peak season (truck scarcity)=no, slack before truck appointment=-5.9d]
+     Upstream delay (propagation)         -2h   [customs release delay=6.4d, vessel arrival delay=-10h]
+     Destination port congestion          +1h   [forecast congestion at destination=0.75, number of containers=26]
+
+  ACTUAL: delivered 2025-05-11 22:39, delay 161h
+====================================================================================================
+
+Shipment SHP0301  |  Singapore -> Hamburg  |  carrier BlueLine  |  cargo electronics  |  checkpoint: C0_booking
+  Scheduled delivery : 2025-07-13 01:12
+  Predicted ETA      : 2025-07-13 05:18   (delay +4h, 80% band -2.4d .. +7.5d)
+  P(delay > 24h)     : 48%
+
+  Expected further delay: +4h  (typical shipment at this stage: +34h)
+  Main drivers vs typical shipment:
+     Customs & documentation             -15h   [scheduled release falls on weekend=no, customs inspection risk (cargo x docs)=0.07]
+     Destination port congestion          -8h   [forecast congestion at destination=0.50, number of containers=4]
+     Ocean transit & weather              -5h   [weather on route=0.11, voyage length=26]
+
+Shipment SHP0301  |  Singapore -> Hamburg  |  carrier BlueLine  |  cargo electronics  |  checkpoint: C2_port_arrival
+  Scheduled delivery : 2025-07-13 01:12
+  Predicted ETA      : 2025-07-13 10:47   (delay +10h, 80% band -14h .. +3.0d)
+  P(delay > 24h)     : 25%
+
+  Delay already incurred: +1h
+     origin (until departure)                  +13h
+     departure -> port arrival                 -12h
+
+  Expected further delay: +9h  (typical shipment at this stage: +33h)
+  Main drivers vs typical shipment:
+     Destination port congestion         -11h   [port congestion on arrival=0.46, lateness x congestion score=0.46]
+     Upstream delay (propagation)         -6h   [vessel arrival delay=1h, departure delay=13h]
+     Ocean transit & weather              -3h   [weather on route=0.11, delay accrued at sea=-12h]
+
+Shipment SHP0301  |  Singapore -> Hamburg  |  carrier BlueLine  |  cargo electronics  |  checkpoint: C3_customs_release
+  Scheduled delivery : 2025-07-13 01:12
+  Predicted ETA      : 2025-07-12 21:35   (delay -4h, 80% band -17h .. +3h)
+  P(delay > 24h)     : 0%
+
+  Delay already incurred: -30h
+     origin (until departure)                  +13h
+     departure -> port arrival                 -12h
+     port arrival -> berth                      -5h
+     berth -> discharge                         -5h
+     discharge -> customs release              -21h
+
+  Expected further delay: +26h  (typical shipment at this stage: +7h)
+  Main drivers vs typical shipment:
+     Upstream delay (propagation)        +20h   [customs release delay=-30h, departure delay=13h]
+     Origin & carrier                     -1h   [origin port congestion=0.40, carrier schedule reliability=0.75]
+     Customs & documentation              -0h   [working hours before weekend=49, customs processing time=18h]
+
+  ACTUAL: delivered 2025-07-13 01:38, delay 0h
+====================================================================================================
+

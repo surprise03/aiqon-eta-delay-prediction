@@ -1,0 +1,200 @@
+{
+  "n": 300,
+  "seed": 42,
+  "delayed_share": 0.5133333333333333,
+  "median_delay_h": 25.605,
+  "metrics": [
+    {
+      "checkpoint": "C0_booking",
+      "mae_schedule": 62.977,
+      "mae_schedule_sd": 8.23,
+      "mae_carry_forward": 62.977,
+      "mae_carry_forward_sd": 8.23,
+      "mae_carry_plus_route_mean": 61.754,
+      "mae_carry_plus_route_mean_sd": 7.03,
+      "mae_ridge": 64.294,
+      "mae_ridge_sd": 7.376,
+      "mae_gbm": 56.874,
+      "mae_gbm_sd": 8.344,
+      "auc": 0.737,
+      "brier": 0.222,
+      "f1": 0.658,
+      "p10_p90_coverage": 0.816,
+      "interval_width_h": 158.562
+    },
+    {
+      "checkpoint": "C1_departed",
+      "mae_schedule": 62.977,
+      "mae_schedule_sd": 8.23,
+      "mae_carry_forward": 48.401,
+      "mae_carry_forward_sd": 8.538,
+      "mae_carry_plus_route_mean": 48.865,
+      "mae_carry_plus_route_mean_sd": 8.676,
+      "mae_ridge": 52.021,
+      "mae_ridge_sd": 6.444,
+      "mae_gbm": 44.158,
+      "mae_gbm_sd": 7.991,
+      "auc": 0.781,
+      "brier": 0.199,
+      "f1": 0.713,
+      "p10_p90_coverage": 0.784,
+      "interval_width_h": 127.283
+    },
+    {
+      "checkpoint": "C2_port_arrival",
+      "mae_schedule": 62.977,
+      "mae_schedule_sd": 8.23,
+      "mae_carry_forward": 44.594,
+      "mae_carry_forward_sd": 5.55,
+      "mae_carry_plus_route_mean": 38.204,
+      "mae_carry_plus_route_mean_sd": 4.793,
+      "mae_ridge": 31.806,
+      "mae_ridge_sd": 2.071,
+      "mae_gbm": 29.237,
+      "mae_gbm_sd": 2.56,
+      "auc": 0.852,
+      "brier": 0.162,
+      "f1": 0.766,
+      "p10_p90_coverage": 0.776,
+      "interval_width_h": 83.44
+    },
+    {
+      "checkpoint": "C3_customs_release",
+      "mae_schedule": 62.977,
+      "mae_schedule_sd": 8.23,
+      "mae_carry_forward": 10.662,
+      "mae_carry_forward_sd": 2.083,
+      "mae_carry_plus_route_mean": 9.695,
+      "mae_carry_plus_route_mean_sd": 1.505,
+      "mae_ridge": 8.823,
+      "mae_ridge_sd": 1.279,
+      "mae_gbm": 5.6,
+      "mae_gbm_sd": 1.036,
+      "auc": 0.987,
+      "brier": 0.039,
+      "f1": 0.952,
+      "p10_p90_coverage": 0.827,
+      "interval_width_h": 18.476
+    }
+  ],
+  "attribution_check": {
+    "n": 154,
+    "top1_agreement": 0.7077922077922078,
+    "top2_agreement": 0.8831168831168831,
+    "chance_top1": 0.3333333333333333
+  },
+  "holdout": [
+    {
+      "checkpoint": "C0_booking",
+      "mae_gbm": 51.1,
+      "mae_carry_forward": 64.622,
+      "coverage": 0.867
+    },
+    {
+      "checkpoint": "C1_departed",
+      "mae_gbm": 44.194,
+      "mae_carry_forward": 54.486,
+      "coverage": 0.883
+    },
+    {
+      "checkpoint": "C2_port_arrival",
+      "mae_gbm": 29.786,
+      "mae_carry_forward": 48.653,
+      "coverage": 0.817
+    },
+    {
+      "checkpoint": "C3_customs_release",
+      "mae_gbm": 5.884,
+      "mae_carry_forward": 13.302,
+      "coverage": 0.733
+    }
+  ],
+  "propagation": [
+    {
+      "congestion": "low (<0.5)",
+      "arrival": "early/on time",
+      "n": 45,
+      "median_arrival_delay_h": -7.9,
+      "median_final_delay_h": 2.5,
+      "median_downstream_added_h": 14.6,
+      "share_absorbed": 0.0
+    },
+    {
+      "congestion": "low (<0.5)",
+      "arrival": "late 0-24h",
+      "n": 21,
+      "median_arrival_delay_h": 7.2,
+      "median_final_delay_h": 5.6,
+      "median_downstream_added_h": -0.9,
+      "share_absorbed": 0.52
+    },
+    {
+      "congestion": "low (<0.5)",
+      "arrival": "late >24h",
+      "n": 10,
+      "median_arrival_delay_h": 162.9,
+      "median_final_delay_h": 231.4,
+      "median_downstream_added_h": 33.5,
+      "share_absorbed": 0.0
+    },
+    {
+      "congestion": "medium (0.5-0.7)",
+      "arrival": "early/on time",
+      "n": 87,
+      "median_arrival_delay_h": -9.1,
+      "median_final_delay_h": 1.3,
+      "median_downstream_added_h": 16.5,
+      "share_absorbed": 0.01
+    },
+    {
+      "congestion": "medium (0.5-0.7)",
+      "arrival": "late 0-24h",
+      "n": 44,
+      "median_arrival_delay_h": 8.0,
+      "median_final_delay_h": 22.1,
+      "median_downstream_added_h": 8.8,
+      "share_absorbed": 0.41
+    },
+    {
+      "congestion": "medium (0.5-0.7)",
+      "arrival": "late >24h",
+      "n": 25,
+      "median_arrival_delay_h": 135.1,
+      "median_final_delay_h": 197.9,
+      "median_downstream_added_h": 65.2,
+      "share_absorbed": 0.0
+    },
+    {
+      "congestion": "high (>0.7)",
+      "arrival": "early/on time",
+      "n": 29,
+      "median_arrival_delay_h": -8.0,
+      "median_final_delay_h": 36.6,
+      "median_downstream_added_h": 44.1,
+      "share_absorbed": 0.0
+    },
+    {
+      "congestion": "high (>0.7)",
+      "arrival": "late 0-24h",
+      "n": 28,
+      "median_arrival_delay_h": 9.8,
+      "median_final_delay_h": 52.5,
+      "median_downstream_added_h": 47.6,
+      "share_absorbed": 0.25
+    },
+    {
+      "congestion": "high (>0.7)",
+      "arrival": "late >24h",
+      "n": 9,
+      "median_arrival_delay_h": 149.4,
+      "median_final_delay_h": 312.4,
+      "median_downstream_added_h": 108.1,
+      "share_absorbed": 0.0
+    }
+  ],
+  "examples": [
+    "SHP0323",
+    "SHP0341",
+    "SHP0301"
+  ]
+}
