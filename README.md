@@ -3,7 +3,7 @@
 Predicts the final ETA of container shipments, the probability and size of a delay, and **explains which stage
 and cause drive it**. It also models how delays are absorbed or amplified as they move through the shipment's stages.
 
-Aiqon AI Internship take-home assignment. Full write-up: [`report/Technical_Report.pdf`](report/Technical_Report.pdf).
+Aiqon take-home assignment. Full write-up: [`report/Technical_Report.pdf`](report/Technical_Report.pdf).
 
 ## Key ideas
 

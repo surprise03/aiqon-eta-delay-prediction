@@ -90,7 +90,7 @@ def build(author: str):
 
     story = [
         P("Predicting Shipment ETA and Delay Propagation", H1),
-        P(f"Aiqon AI Internship – Take-Home Assignment &nbsp;|&nbsp; {author}", SUB),
+        P(f"Aiqon – Take-Home Assignment &nbsp;|&nbsp; {author}", SUB),
         Spacer(1, 4),
         P("1. Problem framing and definitions", H2),
         P("A shipment passes through six stages: <b>origin departure → ocean transit → berth → discharge "
